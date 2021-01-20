@@ -17,6 +17,11 @@ class XadminUEditorWidget(UEditorWidget):
 
 class UeditorPlugin(BaseAdminPlugin):
 
+    # def get_field_attrs(self, attrs, db_field, **kwargs):
+    #     if isinstance(db_field, UEditorField):
+    #         attrs.update({'widget': XadminUEditorWidget(**db_field.formfield().widget.attrs)})
+    #     return attrs
+
     def get_field_style(self, attrs, db_field, style, **kwargs):
         if style == 'ueditor':
             if isinstance(db_field, UEditorField):
